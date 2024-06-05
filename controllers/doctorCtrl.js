@@ -91,8 +91,8 @@ const getDoctorByIdController = async (req, res) => {
 
 const doctorAppointmentsController = async (req, res) => {
   try {
-    const doctor = await doctorModel.find({ userId: req.body.userId });
-    const appointments = await appointmentModel.findOne({
+    const doctor = await doctorModel.findOne({ userId: req.body.userId });
+    const appointments = await appointmentModel.find({
       doctorId: doctor._id,
     });
 
